@@ -83,18 +83,15 @@
     <canvas id="background-animation"></canvas>
 
     <div class="relative min-h-screen md:flex">
-        <!-- Mobile Menu Button -->
         <button id="menu-btn" class="md:hidden fixed top-4 left-4 z-30 p-2 bg-gray-800 rounded-lg text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
 
-        <!-- Overlay for mobile menu -->
         <div id="menu-overlay" class="md:hidden fixed inset-0 bg-black/60 z-10 hidden"></div>
 
-        <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="w-64 bg-gray-900/80 backdrop-blur-sm border-r border-gray-800 p-4 md:p-6 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-20 h-screen flex flex-col">
+        <aside id="sidebar" class="w-64 bg-gray-900/80 backdrop-blur-sm border-r border-gray-800 p-4 pt-16 md:p-6 md:pt-6 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-20 h-screen flex flex-col">
             <h1 class="text-xl md:text-2xl font-bold text-white mb-6">Verilog Lab Hub</h1>
             <nav class="flex-grow flex flex-col space-y-2">
                 <a href="#gates" class="nav-link active text-base md:text-lg px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-gray-800">Basic Gates</a>
@@ -108,10 +105,8 @@
             </div>
         </aside>
 
-        <!-- Main Content -->
-        <main id="main-content" class="flex-1 p-4 sm:p-6 md:p-10 lg:p-12 h-screen overflow-y-auto">
+        <main id="main-content" class="flex-1 p-4 sm:p-6 md:p-10 lg:p-12 pt-20 md:pt-10 lg:pt-12 h-screen overflow-y-auto">
             
-            <!-- Basic Gates Section -->
             <section id="gates" class="content-section active">
                 <h2 class="text-3xl md:text-4xl font-bold text-white border-b border-gray-700 pb-4 mb-8">Basic Logic Gates</h2>
                 
@@ -361,7 +356,6 @@ endmodule
 
             </section>
 
-            <!-- Adders Section -->
             <section id="adders" class="content-section">
                 <h2 class="text-3xl md:text-4xl font-bold text-white border-b border-gray-700 pb-4 mb-8">Adders</h2>
                 <div class="mb-10">
@@ -502,7 +496,6 @@ endmodule
                 </div>
             </section>
             
-            <!-- Subtractors Section -->
             <section id="subtractors" class="content-section">
                 <h2 class="text-3xl md:text-4xl font-bold text-white border-b border-gray-700 pb-4 mb-8">Subtractors</h2>
                 <div class="mb-10">
@@ -592,7 +585,6 @@ endmodule
                 </div>
             </section>
             
-            <!-- 4-Bit Adder Section -->
             <section id="4bit-adder" class="content-section">
                 <h2 class="text-3xl md:text-4xl font-bold text-white border-b border-gray-700 pb-4 mb-8">4-Bit Adder / Ripple Carry Adder</h2>
 
@@ -649,7 +641,6 @@ endmodule
                 </div>
             </section>
             
-            <!-- Mux & Demux Section -->
             <section id="mux-demux" class="content-section">
                 <h2 class="text-3xl md:text-4xl font-bold text-white border-b border-gray-700 pb-4 mb-8">Multiplexer & Demultiplexer</h2>
                 
@@ -815,7 +806,7 @@ endmodule
                         </div>
                          <div class="bg-gray-900 rounded-lg p-6 flex items-center justify-center">
                              <p class="text-gray-400 text-center">The testbench for this is the same as the `tb_mux_4x1.v` above. Just instantiate `mux_4x1_structural` instead.</p>
-                        </div>
+                         </div>
                     </div>
                 </div>
 
@@ -923,7 +914,6 @@ endmodule
         </main>
     </div>
 
-    <!-- Back to Top Button -->
     <button id="to-top-btn" class="fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-3 shadow-lg">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
@@ -1108,4 +1098,3 @@ endmodule
 
 </body>
 </html>
-
