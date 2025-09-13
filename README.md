@@ -35,13 +35,11 @@ The website is structured as a clean single-page application (SPA), allowing for
 ---
 
 🚀 **Project Structure**
-/
-
-
+```
 ├── index.html # Main HTML structure
 ├── style.css # Styling with dark theme and responsiveness
 └── script.js # JavaScript interactivity: SPA logic, clipboard copy, background animation, etc.
-
+```
 
 - **index.html** – Contains the semantic structure, sidebar navigation, and sections for Verilog code examples.  
 - **style.css** – Defines the visual appearance, dark theme, responsive layout, animations, and typography.  
