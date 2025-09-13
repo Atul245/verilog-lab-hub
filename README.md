@@ -35,8 +35,9 @@ The website is structured as a clean single-page application (SPA), allowing for
 ---
 
 🚀 **Project Structure**
-
 /
+
+
 ├── index.html # Main HTML structure
 ├── style.css # Styling with dark theme and responsiveness
 └── script.js # JavaScript interactivity: SPA logic, clipboard copy, background animation, etc.
