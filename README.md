@@ -1,6 +1,7 @@
 # Verilog Lab Hub
 
 📖 **Overview**  
+
 Verilog Lab Hub is a modern, responsive, and user-friendly web interface designed to host a collection of fundamental Verilog codes for digital logic experiments. It serves as a practical and educational tool for students and enthusiasts learning or working with Verilog HDL.
 
 The website is structured as a clean single-page application (SPA), allowing for quick navigation between different topics without page reloads.
