@@ -26,6 +26,7 @@
             border-radius: 0.5rem;
             margin-top: 1rem;
             position: relative;
+            overflow: hidden; /* Ensures h4 active effect respects border radius */
         }
         .copy-button {
             position: absolute;
@@ -73,26 +74,34 @@
         #to-top-btn:hover {
             transform: translateY(-5px) scale(1.1);
         }
+        /* Tap/Press effect for module names on mobile */
+        .code-block-container h4:active {
+            background-color: #1f2937; /* gray-800 */
+        }
     </style>
 </head>
 <body class="antialiased">
     <canvas id="background-animation"></canvas>
 
-    <div class="relative min-h-screen md:flex">
-        <!-- Mobile Menu Button -->
-        <button id="menu-btn" class="md:hidden fixed top-4 left-4 z-30 p-2 bg-gray-800 rounded-lg text-white">
+    <!-- Mobile Header -->
+    <header class="md:hidden fixed top-0 left-0 right-0 z-30 flex items-center justify-between p-4 bg-gray-900/80 backdrop-blur-sm border-b border-gray-800 h-16">
+        <button id="menu-btn" class="p-2 text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
+        <h1 class="text-xl font-bold text-white">Verilog Lab Hub</h1>
+        <div class="w-8"></div> <!-- Spacer to balance the title -->
+    </header>
 
+    <div class="relative min-h-screen md:flex">
         <!-- Overlay for mobile menu -->
-        <div id="menu-overlay" class="md:hidden fixed inset-0 bg-black/60 z-10 hidden"></div>
+        <div id="menu-overlay" class="md:hidden fixed inset-0 bg-black/60 z-40 hidden"></div>
 
         <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="w-64 bg-gray-900/80 backdrop-blur-sm border-r border-gray-800 p-4 md:p-6 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-20 h-screen flex flex-col">
-            <h1 class="text-xl md:text-2xl font-bold text-white mb-6">Verilog Lab Hub</h1>
-            <nav class="flex-grow flex flex-col space-y-2">
+        <aside id="sidebar" class="w-64 bg-gray-900/80 backdrop-blur-sm border-r border-gray-800 p-4 md:p-6 fixed inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 z-50 h-screen flex flex-col">
+            <h1 class="hidden md:block text-xl md:text-2xl font-bold text-white mb-6">Verilog Lab Hub</h1>
+            <nav class="flex-grow flex flex-col space-y-2 mt-16 md:mt-0">
                 <a href="#gates" class="nav-link active text-base md:text-lg px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-gray-800">Basic Gates</a>
                 <a href="#adders" class="nav-link text-base md:text-lg px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-gray-800">Adders</a>
                 <a href="#subtractors" class="nav-link text-base md:text-lg px-4 py-2 rounded-lg transition-colors duration-200 hover:bg-gray-800">Subtractors</a>
@@ -105,7 +114,7 @@
         </aside>
 
         <!-- Main Content -->
-        <main id="main-content" class="flex-1 p-4 sm:p-6 md:p-10 lg:p-12 h-screen overflow-y-auto">
+        <main id="main-content" class="flex-1 p-4 sm:p-6 md:p-10 lg:p-12 h-screen overflow-y-auto pt-20 md:pt-10">
             
             <!-- Basic Gates Section -->
             <section id="gates" class="content-section active">
@@ -931,7 +940,6 @@ endmodule
                         </div>
                     </div>
                 </div>
-
             </section>
             <footer class="mt-12 text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
                 <p>&copy; 2024 Verilog Lab Hub. Created by ❤️ Atul kumar.</p>
