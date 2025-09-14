@@ -710,7 +710,7 @@ module tb_mux_8x1;
     reg [2:0] sel;
     wire y;
 
-    mux_8x1 uut (d, sel, y);
+    mux_8x1 uut (.d(d), .sel(sel), .y(y));
     
     initial begin
         d = 8'b11010101;
